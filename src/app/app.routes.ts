@@ -12,6 +12,11 @@ const routes: Routes = [
   { path: 'datos', component: DatosComponent },
   { path: 'registro/:id', component: InsertarComponent },
   { path: 'editar/:key', component: EditarComponent },
+
+  { path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
