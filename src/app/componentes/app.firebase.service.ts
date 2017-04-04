@@ -28,4 +28,12 @@ export class FirebaseService {
     })
   }
 
+  peticionGet(){
+    let urlGet = 'https://fireapp-83078.firebaseio.com/datos.json';
+
+    return this._http.get(urlGet).map(res => {
+      return res.json();
+    })
+  }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FirebaseService} from "../app.firebase.service";
 
 @Component({
   selector: 'app-datos',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _firebase:FirebaseService) { }
 
   ngOnInit() {
+    this._firebase.peticionGet().subscribe(data => {
+      console.log(data);
+    })
   }
+
 
 }
