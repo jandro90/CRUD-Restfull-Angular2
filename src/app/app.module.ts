@@ -8,13 +8,15 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import {RoutingModule} from "./app.routes";
 import { HomeComponent } from './componentes/home/home.component';
 import { DatosComponent } from './componentes/datos/datos.component';
+import { InsertarComponent } from './componentes/insertar/insertar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    DatosComponent
+    DatosComponent,
+    InsertarComponent
   ],
   imports: [
     BrowserModule,
