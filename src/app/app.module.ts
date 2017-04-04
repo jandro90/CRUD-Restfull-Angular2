@@ -9,6 +9,7 @@ import {RoutingModule} from "./app.routes";
 import { HomeComponent } from './componentes/home/home.component';
 import { DatosComponent } from './componentes/datos/datos.component';
 import { InsertarComponent } from './componentes/insertar/insertar.component';
+import {FirebaseService} from "./componentes/app.firebase.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { InsertarComponent } from './componentes/insertar/insertar.component';
     HttpModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [
+    FirebaseService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

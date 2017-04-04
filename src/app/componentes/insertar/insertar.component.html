@@ -6,19 +6,23 @@
     <form>
       <div class="form-group">
         <label>Nombre</label>
-        <input type="text" class="form-control" placeholder="Nombre">
+        <input type="text" class="form-control" placeholder="Nombre" required
+        [(ngModel)]="datosUsuario.nombre" name="nombre">
       </div>
 
       <div class="form-group">
         <label>Cargo</label>
-        <input type="text" class="form-control" placeholder="Cargo">
+        <input type="text" class="form-control" placeholder="Cargo" required
+        [(ngModel)]="datosUsuario.cargo" name="cargo">
       </div>
 
       <div class="form-group">
         <label>Descripcion</label>
-        <textarea type="text" class="form-control altura-area" placeholder="Descripcion"></textarea>
+        <textarea type="text" class="form-control altura-area" placeholder="Descripcion" required
+        [(ngModel)]="datosUsuario.descripcion" name="descripcion"></textarea>
       </div>
-      <button class="btn btn-outline-primary"><i class="fa fa-floppy-o" aria-hidden="true"> </i>
+      <button class="btn btn-outline-primary"
+      type="submit" (click)="enviarDatos()"><i class="fa fa-floppy-o" aria-hidden="true"> </i>
         Guardar</button>
     </form>
 
