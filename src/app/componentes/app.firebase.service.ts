@@ -19,4 +19,13 @@ export class FirebaseService {
 
   }
 
+  peticionPut(key:string, datosUsuario:any){
+    let urlPut = `https://fireapp-83078.firebaseio.com/datos/${key}.json`;
+    let body = JSON.stringify(datosUsuario);
+
+    return this._http.put(urlPut,body).map(res => {
+      console.log(res.json());
+    })
+  }
+
 }
