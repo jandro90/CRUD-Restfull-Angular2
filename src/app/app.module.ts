@@ -10,6 +10,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { DatosComponent } from './componentes/datos/datos.component';
 import { InsertarComponent } from './componentes/insertar/insertar.component';
 import {FirebaseService} from "./componentes/app.firebase.service";
+import { EditarComponent } from './componentes/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FirebaseService} from "./componentes/app.firebase.service";
     NavbarComponent,
     HomeComponent,
     DatosComponent,
-    InsertarComponent
+    InsertarComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

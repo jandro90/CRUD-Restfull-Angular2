@@ -36,4 +36,22 @@ export class FirebaseService {
     })
   }
 
+  insertarEdicion(key:string, datosUsuario:any){
+    let urlEditar:string = `https://fireapp-83078.firebaseio.com/datos/${key}.json`;
+    let body = JSON.stringify(datosUsuario);
+
+    return this._http.put(urlEditar,body).map(res=>{
+      console.log(res.json());
+    })
+  }
+
+  eliminarDelete(keyz:string){
+
+    let urlDelete:string = `https://fireapp-83078.firebaseio.com/datos/${keyz}.json`;
+
+    return this._http.delete(urlDelete).map(res => {
+      console.log(res.json())
+    })
+  }
+
 }

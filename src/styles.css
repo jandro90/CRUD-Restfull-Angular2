@@ -10,3 +10,14 @@
 .altura-area{
   line-height: 3rem;
 }
+
+.botones-tabla{
+  display: flex;
+  justify-content: flex-start;
+  background-color: antiquewhite;
+  width: 3rem;
+}
+
+.botones-tabla button{
+  align-self: center;
+}

@@ -14,7 +14,7 @@ export class InsertarComponent implements OnInit {
     nombre: '',
     cargo: '',
     descripcion:'',
-    key: '',
+    keyz: '',
   };
 
   private spinner:boolean = false;
@@ -41,9 +41,9 @@ export class InsertarComponent implements OnInit {
 
       //Conectando con el servicio para insertar Registro.
       this._firebase.peticionPost(this.datosUsuario).subscribe(data => {
-        this.datosUsuario.key = data.name;
+        this.datosUsuario.keyz = data.name;
         //Añadiendo la key al Objeto.
-        this._firebase.peticionPut(this.datosUsuario.key, this.datosUsuario).subscribe();
+        this._firebase.peticionPut(this.datosUsuario.keyz, this.datosUsuario).subscribe();
       });
 
       this.msgError = false;
