@@ -22,9 +22,25 @@
         [(ngModel)]="datosUsuario.descripcion" name="descripcion"></textarea>
       </div>
       <button class="btn btn-outline-primary"
-      type="submit" (click)="enviarDatos()"><i class="fa fa-floppy-o" aria-hidden="true"> </i>
+      type="submit" (click)="enviarDatos()" *ngIf="!spinner">
+        <i class="fa fa-floppy-o" aria-hidden="true"> </i>
         Guardar</button>
+
+      <button class="btn btn-outline-primary"
+              *ngIf="spinner" type="submit">
+        <i class="fa fa-spinner fa-spin" aria-hidden="true"> </i>
+        Insertando Datos...</button>
     </form>
+
+    <div class="alert alert-danger col-md-12" role="alert" *ngIf="msgError">
+      <strong>Debes de completar todos los campos para que se puedan guardar los datos.</strong>
+    </div>
+
+    <div class="alert alert-success col-md-12" role="alert" *ngIf="msgSucces">
+      <p><strong>Bien echo! tus datos se han guardado correctamente.</strong></p>
+      <p><i class="fa fa-spinner fa-spin" aria-hidden="true"></i> En breves serás redirigido para que veas el contenido en una tabla.
+      </p>
+    </div>
 
   </div>
 
